@@ -2,7 +2,9 @@ import React, { useContext } from 'react'
 import FakeAudio from '../../Audio/FakeAudio'
 import ContextInit from '../../Context/ContextInit'
 import IMAGES from '../../Images/images'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import "react-lazy-load-image-component/src/effects/opacity.css"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 
 
@@ -15,7 +17,12 @@ const HomeItem = ({name, stream, artist, image, download, audio, id}) => {
   return (
     <div className='h-32 w-full flex' onClick={() => click(mainId)}>
         <div className='h-10 w-32 mt-6'>
-            <img src={image} className="p-2 object-cover h-20 w-20 "/>
+          <LazyLoadImage src={image}
+              className="p-2 object-cover h-20 w-20 "
+              PlaceholderSrc={image}
+              effect= 'blur'
+              alt="Image Alt"
+          />
         </div>
 
 

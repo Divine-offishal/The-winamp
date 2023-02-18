@@ -7,11 +7,21 @@
 
 
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import "react-lazy-load-image-component/src/effects/opacity.css"
+import "react-lazy-load-image-component/src/effects/blur.css"
+
 export default function Card({item}) {
 
   return <>
   <div className='md:w-44 w-64 h-44 p-4'>
-                  <img src={item.image} alt={item.name} className=" w-full h-full object-cover" />
+                  <LazyLoadImage src={item.image}
+                      className="w-64 h-32 object-cover "
+                      PlaceholderSrc={item.image}
+                      effect= 'blur'
+                      alt={item.name}
+                  />
+
                 </div>
                 <div className='mt-4'>
                   <h1>{item.name}</h1>
