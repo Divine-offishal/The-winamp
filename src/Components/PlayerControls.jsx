@@ -8,6 +8,9 @@ import { playCircle } from "ionicons/icons"
 import { pauseCircle } from "ionicons/icons"
 import IMAGES from '../Images/images'
 import ContextInit from '../Context/ContextInit'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import "react-lazy-load-image-component/src/effects/opacity.css"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 const PlayerControls = () => {
 
@@ -26,7 +29,13 @@ const PlayerControls = () => {
   return (
     <div className='w-full h-32 fixed bottom-0 left-58 flex shadow-2xl backdrop-blur-lg bg-neutral-900/30 text-3xl'>
         <div className='h-32 w-32 m-4 md:block hidden'>
-            <img src={image} className="w-full h-full object-cover "/>
+            <LazyLoadImage src={image}
+                className="w-32 h-32 object-cover "
+                PlaceholderSrc={image}
+                effect= 'blur'
+                alt="Image Alt"
+            />
+            {/* <img src={image} className="w-full h-full object-cover "/> */}
 
         </div>
 

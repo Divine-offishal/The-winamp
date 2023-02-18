@@ -32,7 +32,7 @@ const Carousel = () => {
             <SwiperSlide>
                 <div className='bg-[url(https://img.freepik.com/premium-photo/black-music-notes-flowing-along-lines-song-melody-dark-background-copy-space-your-text-title-top-concept-music-aesthetic-rhythm-3d-illustration-rendering_34515-927.jpg)] text-neutral-50 h-full'>
                 <div className='h-full z-10 relative top-0 bg-gradient-to-b from-neutral-900 to-neutral-900/20'>
-                    <h1 className='text-5xl font-bold text-center pt-32 text-neutral-50'>Discover new Jams</h1> 
+                    <h1 className='text-5xl font-bold text-center pt-32 text-neutral-50'>Discover new Jams</h1>
                 </div>
                 </div>
             </SwiperSlide>
